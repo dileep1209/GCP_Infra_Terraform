@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
-    name = "virtual-machine-from-terraform"
+    name = "Apache Server"
     machine_type = "e2-standard-4"
-    zone = "us-central1-c"
+    zone = var.gcp_region
 
     boot_disk {
       initialize_params {

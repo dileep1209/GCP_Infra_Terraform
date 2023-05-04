@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("credentials.json")}"
-  project = "kubernates-practice-380905"
-  region = "us-central1-c"
+  credentials = var.gcp_auth_file
+  project = var.gcp_project_id
+  region = var.gcp_region
 }
